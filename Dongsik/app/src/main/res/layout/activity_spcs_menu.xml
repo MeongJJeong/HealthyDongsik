@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/redPrimary"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".SpcsMenuActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="종목 선택"
+        android:textSize="30dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:textColor="@color/simpleWhite" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:id="@+id/spcs_recyclerView"
+        android:background="@drawable/round_white"
+        android:layout_marginTop="60dp"
+        android:padding="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:gravity="center"
+        android:id="@+id/content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_below="@id/spcs_recyclerView"
+        android:background="@color/simpleWhite">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="text"
+            android:cursorVisible="false"
+            android:id="@+id/edt_add"
+            android:textSize="20sp"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@color/transparent"
+            android:id="@+id/btn_add"
+            android:text="+"
+            android:textColor="@color/redPrimary"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
